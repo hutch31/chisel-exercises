@@ -13,6 +13,11 @@ for a more comprehensive reference.
 The [Chisel Cookbook](https://www.chisel-lang.org/chisel3/docs/cookbooks/cookbook.html) has references on specific 
 cases and their answers.
 
+### System Prerequisites
+
+The exercises are designed such that the only prerequisite is sbt (and Java, which is required to run sbt).
+The IntelliJ IDE is recommended but not required, and Gtkwave is also recommended to view generated waveforms.
+
 ## Exercises
 
 ### Exercise 1

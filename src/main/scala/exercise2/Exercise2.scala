@@ -22,11 +22,11 @@ class Exercise2 extends Module {
   val io = IO(new Bundle {
     // The Flipped() function reverses the direction of all signals underneath it.
     // ValidIO() wraps the signals with a xxx.valid signal
-    val in_a = Flipped(ValidIO(UInt(16.W)))
-    val in_b = Flipped(ValidIO(UInt(16.W)))
+    val in_a = Flipped(Valid(UInt(16.W)))
+    val in_b = Flipped(Valid(UInt(16.W)))
     // By convention, Decoupled() and ValidIO() are output interfaces, and must be Flipped() to
     // make them input interfaces
-    val out_z = ValidIO(UInt(16.W))
+    val out_z = Valid(UInt(16.W))
   })
 
   // Remove the output assignments below, and put your chisel code for the exercise here
