@@ -6,6 +6,8 @@ This exercise uses ValidIO, which is a composite type which takes a parameter an
 to it to qualify the data.  The two most commmon composite types in Chisel are ValidIO and DecoupledIO.
 DecoupledIO adds both valid and ready signals to its parameterized type.
 
+## Language Background
+
 All classes in Scala can take *parameters*, which are variables which can change the functionality of
 the class.  Chisel uses parameters extensively to increase the power and flexibility of the language.
 Any valid object can be passed as a parameter, including a class.

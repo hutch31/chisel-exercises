@@ -40,7 +40,7 @@ of Module.
 ### IO Declaration
 
 From the class definition, Chisel elements can be defined in any order, but a good convention to follow
-is that all inputs should be declared at the top of the module.  This statement defines a single block
+is that all ports should be declared at the top of the module.  This statement defines a single block
 of ports for the module named "io".  The IO() call below indicates that the contained bundle should all
 be IO ports.
 
