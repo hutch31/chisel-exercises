@@ -15,8 +15,14 @@ import chisel3.util._
  * the block adds the last valid value from input B to A, and produces a valid output one
  * cycle later.
  *
- * When inputs A and B are valid in the same cycle, the output should be A+B.  When only B
- * is asserted, the value should be stored for future computations.
+ * Output assertion is dependent only on the assertion of in_a.valid.  The output has two
+ * possible results, depending on whether in_b.valid was asserted at the same time as
+ * in_a.valid.
+ *
+ * When inputs A and B are valid in the same cycle, the output should be A+B.  When only
+ * A is asserted, the output should be A + SavedB, where SavedB was the value of B from
+ * the last time it was valid.  When only B is asserted, the value should be stored in
+ * SavedB for future computations.
  */
 class Exercise2 extends Module {
   val io = IO(new Bundle {
