@@ -3,6 +3,17 @@ package exercise4
 import chisel3._
 import chisel3.util._
 
+/** Use serial multiplication to multiply two numbers
+  * 
+  * The Multiplier uses bit-serial multiplication to implement multiplication using a series
+  * of shift and add operations.  This allows for a slow but very low-cost multiplier.
+  * 
+  * Multiplier assumes that the inputs will be held valid until the operation is complete.
+  * The two inputs A and B will assert ready at different times; B asserts ready just after
+  * beginning computation, and A will not assert ready until the computation is complete.
+  *
+  * @param width Bit width of each input port
+  */
 class Multiplier(width: Int) extends Module {
   val io = IO(new Bundle {
     val a = Flipped(Decoupled(UInt(width.W)))

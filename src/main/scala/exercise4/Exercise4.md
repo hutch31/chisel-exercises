@@ -5,6 +5,10 @@ The objective of exercise 4 is to instantiate and connect to a module.  This wil
 ports in a module and the bundle connect operator *<>*.  The solution for this objective is more complex, and 
 will require you to use the items from Exercises 1-3 as well.
 
+Exercise 4 should be built using the provided Multiplier code.  As the header documentation notes, the two
+Multiplier inputs assert ready at different times, so cannot simply be tied together to perform the correct
+calculation.
+
 ## Language Background
 
 Modules are declared in Chisel by creating a new object and wrapping it in a Module() call.  The object must be
