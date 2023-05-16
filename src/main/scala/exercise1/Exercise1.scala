@@ -25,5 +25,5 @@ class Exercise1 extends Module {
 
   // Put your Chisel code here
   // Reference input port values as io.in_a and io.in_b
-  io.out_z := RegNext(io.in_a + io.in_b)
+  io.out_z := 0.U
 }
