@@ -86,3 +86,7 @@ work.
 ### [Exercise 5](src/main/scala/exercise5/Exercise5.md)
 
 The fifth exercise explores Chisel type conversions and parameterized design.
+
+### [Exercise 6](src/main/scala/exercise5/Exercise6.md)
+
+Exercise 6 uses some Chisel library components and introduces Scala generic classes.
