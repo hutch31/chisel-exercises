@@ -1,6 +1,25 @@
 Exercise 6
 ==========
 
+## Exercise Overview
+
+This exercise introduces Generic classes.  Generic classes are a Scala/Chisel concept that goes beyond what traditional
+HDLs provide, and may take some time to absorb.
+
+In traditional HDLs, we can define modules which take a parameterized width in bits, but the implementation will have
+no information about the data other than its bit width.  Generics allow us to construct modules which have *partial
+information* about the data our module is processing.  This allows our module to operation according to the information
+which it needs to perform its function, and it can remain ingorant about the size or shape of the remainder of the
+data.
+
+We have already seen generic classes in the basic Chisel Queue implementation, and in the provided DCDemux block.
+These blocks require their inputs to have a Decoupled interface, but can carry any data inside that Decoupled interface.
+Exercise 6 expands on this idea by processing on data of type IndexBundle, which contains a single index field which
+it needs to do its sorting.  Users of IndexBundle can expand on it by creating their own subclass of IndexBundle to 
+carry the data needed for their application.
+
+### Library Components
+
 The Chisel library has some useful components in it.  The common library elements I have used are:
 
  - log2Ceil
