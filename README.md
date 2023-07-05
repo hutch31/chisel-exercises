@@ -87,6 +87,10 @@ work.
 
 The fifth exercise explores Chisel type conversions and parameterized design.
 
-### [Exercise 6](src/main/scala/exercise5/Exercise6.md)
+### [Exercise 6](src/main/scala/exercise6/Exercise6.md)
 
 Exercise 6 uses some Chisel library components and introduces Scala generic classes.
+
+### [Exercise 7](src/main/scala/exercise7/Exercise7.md)
+
+Exercise 7 shows how to create unit tests, and provides blocks with known bugs for testing.
