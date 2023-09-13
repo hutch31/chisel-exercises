@@ -1,8 +1,6 @@
 package exercise3
 
 import chisel3._
-// The ChiselStage import is used to access the Chisel RTL Generator
-import chisel3.stage.ChiselStage
 // The util import contains many useful but not critical elements, such as Decoupled and
 // ValidIO.  Most blocks should routinly put chisel3._ and chisel3.util._ imports.
 import chisel3.util._

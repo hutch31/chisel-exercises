@@ -1,7 +1,7 @@
 package exercise5
 
 import chisel3._
-import chisel3.stage.ChiselStage
+import circt.stage.ChiselStage
 import chisel3.util._
 
 /** Create a byte swapper which extracts bits from an incoming word and replaces them.
@@ -35,5 +35,5 @@ class Exercise5(byteWidth : Int) extends Module {
 }
 
 object GenExercise5 extends App {
-  (new ChiselStage).emitVerilog(new Exercise5(4), Array("--target-dir", "rtl/exercise5"))
+  ChiselStage.emitSystemVerilog(new Exercise5(4), firtoolOpts = Array("--split-verilog", "-o=genrtl/exercise5"))
 }
